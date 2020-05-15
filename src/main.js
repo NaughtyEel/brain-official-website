@@ -8,13 +8,17 @@ import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import 'lib-flexible'
 import Toast from 'vue-toast-component';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+// import swiper style
+import 'swiper/css/swiper.css'
 
-Vue.config.productionTip = false
+Vue.use(VueAwesomeSwiper);
+Vue.config.productionTip = false;
 
 Vue.use(Toast);
 Vue.use(ElementUI);
-Vue.use(VueRouter)
-Vue.use(Vuex)
+Vue.use(VueRouter);
+Vue.use(Vuex);
 
 /* eslint-disable no-new */
 new Vue({
@@ -22,4 +26,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});

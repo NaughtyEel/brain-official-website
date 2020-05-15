@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import HelloWorld from '@/components/HelloWorld'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -20,27 +20,26 @@ export default new Router({
       children:[
         {
           path: '/homePage',
-          name: '首页',
+          name: '公司首页',
           component: resolve => require(['../views/pages/homePage.vue'], resolve),
         },
         {
+          path: '/introduce',
+          name: '公司介绍',
+          component: resolve => require(['../views/pages/introduce.vue'], resolve),
+        },
+        {
           path: '/product',
-          name: '产品',
+          name: '公司产品',
           component: resolve => require(['../views/pages/product.vue'], resolve),
         },
         {
-          path: '/case',
-          name: '案例',
-          component: resolve => require(['../views/pages/case.vue'], resolve),
-        },
-        {
-          path: '/aboutUs',
-          name: '关于我们',
-          component: resolve => require(['../views/pages/aboutUs.vue'], resolve),
+          path: '/joinUs',
+          name: '加入我们',
+          component: resolve => require(['../views/pages/joinUs.vue'], resolve),
         },
       ]
     },
-
 
   ]
 })

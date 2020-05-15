@@ -1,834 +1,365 @@
 <template>
-    <section>
-      <div class="intro">
-        <div class="img">
-          <img src="../../assets/icon-park-mark.png">
+  <section>
+    <div class="banner">
+      <div class="lunbotu">
+        <div class="button prev" @click="prevSlideClick"></div>
+        <div class="swiper-container">
+          <swiper ref="productSwiper" :options="swiperOption1">
+            <swiper-slide><img src="../../assets/chanpina1.jpg"/></swiper-slide>
+            <swiper-slide><img src="../../assets/chanpina2.jpg"/></swiper-slide>
+            <swiper-slide><img src="../../assets/chanpina3.png"/></swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+          </swiper>
         </div>
-        <ul>
-          <li class="title">
-            <b>产品简介</b>
-            <span>The case shows</span>
-          </li>
-          <li class="second-title">什么是园区大脑？</li>
-          <li class="title-intro">“园区大脑”是一个智慧生态园区管理运营平台。</li>
-          <li class="title-disc">
-            基于云计算、物联网、移动互联网、大数据等现代信息技术为关键，为园区智慧化发展提供
-            整体解决方案及联合运营服务，助力园区运营升级。
-          </li>
-        </ul>
+        <div class="button next" @click="nextSlideClick"></div>
       </div>
-      <div class="park-future">
-        <ul class="text">
-          <li class="title">
-            <b>园区未来</b>
-            <span>The case shows</span>
-          </li>
-          <li class="disc">
-            「 园区大脑，为您构建同时具备智慧服务特质与生态运营特质的未来园区 」
-          </li>
-        </ul>
-        <div class="detail">
-          <ul class="wisdom park">
-            <li class="tips">
-              <ul>
-                <li class="perception">
-                  <i></i><span>感知</span>
-                </li>
-                <li class="energy">
-                  <i></i><span>能源</span>
-                </li>
-                <li class="time">
-                  <i></i><span>即时</span>
-                </li>
-              </ul>
-            </li>
-            <li class="park-img"></li>
-            <li class="feature">
-              <ul class="feature-item">
-                <li class="title">智慧园区</li>
-                <li>
-                  <span>高效管理</span>
-                  <span>低能耗</span>
-                  <span>低成本</span>
-                </li>
-                <li>
-                  <span>集中调度</span>
-                  <span>运维</span>
-                  <span>服务体验</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="ecological park">
-            <li class="tips">
-              <ul>
-                <li class="info">
-                  <i></i><span>资讯</span>
-                </li>
-                <li class="financial">
-                  <i></i><span>金融</span>
-                </li>
-                <li class="flux">
-                  <i></i><span>流量</span>
-                </li>
-                <li class="replace">
-                  <i></i><span>置换</span>
-                </li>
-              </ul>
-            </li>
-            <li class="park-img"></li>
-            <li class="feature">
-              <ul class="feature-item">
-                <li class="title">生态园区</li>
-                <li>
-                  <span>开放能力</span>
-                  <span>集成能力</span>
-                  <span>运营能力</span>
-                </li>
-                <li>
-                  <span>资源接入</span>
-                  <span>数据变现</span>
-                  <span>服务商品化</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <div class="eachReplace">
-            <span class="arrow left"></span>
-            <span class="park-logo"></span>
-            <span class="arrow right"></span>
-          </div>
-        </div>
-      </div>
-      <div class="wisdomService">
-        <div class="img"></div>
-        <ul>
-          <li class="title">「 智慧生态园区的服务受众 」</li>
-          <li>
-            <i></i>
-            <span>
-               舒适便捷的办公和生活环境，周边消费服务，丰富的社交平台，即时互动。
-            </span>
-          </li>
-          <li>
-            <i></i>
-            <span>
-              一站式企业服务，提高企业管理效能和经营成本，完善的配套服务资源，金融、资讯、政务、公告资源等。
-            </span>
-            </li>
-          <li>
-            <i></i>
-            <span>
-              品牌价值提升，拓展收入渠道，减少能源损耗，提高资源利用率。
-            </span>
-          </li>
-          <li class="line">
-            <i></i>
-            <span></span>
-          </li>
-          <li>
-            <i class="mark"></i>
-            <span>
-                园区大脑，满足园区多方用户的实际需要，打造和谐共赢的园区环境。
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div class="operaSolution">
-        <span class="title-disc">「 当前智慧园区的运营痛点以及解决之道 」</span>
-        <div class="detail">
-          <div class="ques opImg"></div>
-          <div class="eachReplace">
-            <span class="arrow left"></span>
-            <span class="park-logo"></span>
-            <span class="arrow right"></span>
-          </div>
-          <div class="target opImg"></div>
-        </div>
-      </div>
-      <div class="outline">
-        <ul class="text">
-          <li>金融机构</li>
-          <li class="text-title">方案概况</li>
-          <li>The case shows</li>
-        </ul>
-        <div class="detail"></div>
-      </div>
-      <div class="systemFrame">
-        <span class="title-disc">「 系统框架  层级 」</span>
-        <div class="detail"></div>
-      </div>
-      <div class="productForm">
-        <span class="title-disc">「 丰富的用户触点 」</span>
-        <span class="title-disc">园区大脑产品形态</span>
-        <ul class="detail">
-          <li>
-            <span class="parkOpera"></span>
-            <span class="parkProperty"></span>
-          </li>
-          <li>
-            <span class="parkBack"></span>
-            <span class="parkIntelMonit"></span>
-          </li>
-        </ul>
-      </div>
-      <div class="userScenario">
-        <ul class="text">
-          <li class="title">用户场景</li>
-          <li>The case shows</li>
-          <li class="title-disc">「 用户自助服务 」</li>
-        </ul>
-        <div class="detail">
-          <span>在线物管+自助服务，提高用户体验，降低物业管理成本。</span>
-        </div>
-        <div class="text-disc">
-          <span class="fir">在APP上提交报修申请</span>
-          <span class="sec">通过APP在线办理月卡</span>
-          <span class="th">门禁通道人脸识别通行</span>
-          <span class="fou">在门禁通道设备上扫二位码通行</span>
-          <span class="fiv">在线缴纳停车费物业管理费/月卡费</span>
-        </div>
-        <div class="usImg"></div>
-      </div>
-      <div class="user-contact">
-        <ul class="text">
-          <li class="title-disc">「 丰富的用户触点 」</li>
-          <li>建立用户与用户之间、用户与管理方之间即时、友好的信息互动，提高服务感知。</li>
-        </ul>
-        <div class="detail"></div>
-      </div>
-      <div class="office-online">
-        <div class="text">
-          <span class="text-disc">「 在线办公服务」</span>
-          <ul class="text-info">
-            <li>信息化办公流程</li>
-            <li>后台业务自动流转</li>
-            <li>即时响应</li>
-            <li>便捷快速的高体验触点</li>
-            <li>处理效率全程追踪记录</li>
-            <li>++办公效能统计分析</li>
-          </ul>
-        </div>
-        <div class="detail"></div>
-      </div>
-      <div class="parkAll">
-        <span class="text-disc">「 园区业务全景」</span>
-        <div class="img"></div>
-        <ul class="text">
-          <li>
-            <b>服务</b>
-            <span>
-              搭建用户间信息互动平台，建立用户与用户、用户与管理方的信息桥梁，为园区内用户提供参与管理的途径，
-              强化服务主动性和反馈，提升用户对管理方的服务感知。
-            </span>
-          </li>
-          <li>
-            <b>管理</b>
-            <span>
-              基于无人化+自助服务管理思路，在线、远程、集中式、平台化的管理策略，为园区提供低成本、高效
-              率的管理模式。
-            </span>
-          </li>
-          <li>
-            <b>运营</b>
-            <span>
-              依托用户刚需为基础获取用户/提高黏性，以有偿信息服务、促成交易分成、数据分析等业务设计，为
-              管理方带来运营收入。
-            </span>
-          </li>
-        </ul>
-      </div>
+    </div>
 
-    </section>
+    <div class="shouji">
+      <img class="title" src="../../../static/shoujititle.png">
+      <div class="shouji-lunbo">
+        <div class="lunbotu2">
+          <div class="button2 prev2" @click="prevSlideClick2"></div>
+          <div class="swiper-container2">
+            <swiper ref="productSwiper2" :options="swiperOption2">
+              <swiper-slide><img src="../../assets/chanpina1.jpg"/></swiper-slide>
+              <swiper-slide><img src="../../assets/chanpina2.jpg"/></swiper-slide>
+              <div class="swiper-pagination2" slot="pagination"></div>
+            </swiper>
+          </div>
+          <div class="button2 next2" @click="nextSlideClick2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tv">
+      <img class="title" src="../../../static/TVtitle.png">
+      <div class="tv-lunbo">
+        <div class="lunbotu3">
+          <div class="button3 prev3" @click="prevSlideClick3"></div>
+          <div class="swiper-container3">
+            <swiper ref="productSwiper3" :options="swiperOption3">
+              <swiper-slide><img src="../../assets/tvproduct1.jpg"/></swiper-slide>
+              <swiper-slide><img src="../../assets/tvproduct2.jpg"/></swiper-slide>
+              <swiper-slide><img src="../../assets/tvproduct3.jpg"/></swiper-slide>
+              <swiper-slide><img src="../../assets/tvproduct4.jpg"/></swiper-slide>
+              <swiper-slide><img src="../../assets/tvproduct5.jpg"/></swiper-slide>
+              <div class="swiper-pagination3" slot="pagination"></div>
+            </swiper>
+          </div>
+          <div class="button3 next3" @click="nextSlideClick3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="yewu"></div>
+  </section>
 </template>
 
 <script>
-    export default {
-        name: "product"
+  import {Swiper, SwiperSlide} from 'vue-awesome-swiper';
+  import 'swiper/css/swiper.css';
+
+  export default {
+    name: "product",
+    components: {
+      Swiper,
+      SwiperSlide
+    },
+    data() {
+      return {
+        swiperOption1: {
+          autoplay: true,
+          speed: 300,
+          grabCursor: true,
+          loop: true,
+          navigation: {
+            outline: 'none',
+          },
+        },
+        swiperOption2: {
+          autoplay: true,
+          speed: 300,
+          grabCursor: true,
+          loop: true,
+          slidesPerView : 3,
+          centeredSlides : true,
+          spaceBetween : 100,
+          navigation: {
+            outline: 'none',
+          },
+        },
+        swiperOption3: {
+          autoplay: true,
+          speed: 300,
+          grabCursor: true,
+          loop: true,
+          slidesPerView : 3,
+          centeredSlides : true,
+          spaceBetween : 100,
+          navigation: {
+            outline: 'none',
+          },
+        }
+      }
+    },
+    computed: {
+      swiper() {
+        return this.$refs.productSwiper.$swiper
+      },
+      swiper2() {
+        return this.$refs.productSwiper2.$swiper
+      },
+      swiper3() {
+        return this.$refs.productSwiper3.$swiper
+      }
+    },
+    mounted() {
+      console.log('Current Swiper instance object', this.swiper);
+    },
+    methods: {
+      prevSlideClick() {
+        this.swiper.slidePrev();
+      },
+      nextSlideClick() {
+        this.swiper.slideNext();
+      },
+      prevSlideClick2() {
+        this.swiper2.slidePrev();
+      },
+      nextSlideClick2() {
+        this.swiper2.slideNext();
+      },
+      prevSlideClick3() {
+        this.swiper3.slidePrev();
+      },
+      nextSlideClick3() {
+        this.swiper3.slideNext();
+      }
+
     }
+  }
 </script>
 
 <style lang="scss" scoped>
-  *{box-sizing: border-box;}
-  .intro{
-    height: 16.67rem;
-    background: url(../../assets/icon-pro-bg.jpg) no-repeat center center;
-    background-size: 100% 16.67rem;
-    box-sizing: border-box;
-    color: #fff;
-    .img{
-      display: inline-block;
-      width: 49%;
-      height: 100%;
-      vertical-align: middle;
-      text-align: right;
-      img{
-        width: 8.2rem;
-        height: 8.2rem;
-        margin-top: 4.24rem;
-        margin-right: 0.83rem;
-      }
-    }
-    ul{
-      display: inline-block;
-      width: 49%;
-      padding-left: 0.83rem;
-      padding-right: 0.8rem;
-      box-sizing: border-box;
-      text-align: justify;
-      vertical-align: middle;
-      .title{
-        margin-bottom: 1.29rem;
-        b{
-          display: inline-block;
-          width: 100%;
-          font-family: PingFangSC-Light;
-          font-size: 0.89rem;
-          letter-spacing: 0;
-          margin-bottom: 3px;
-        }
-        span{
-          font-family: PingFangSC-Light;
-          font-size: 0.44rem;
-          letter-spacing: 0;
+  .banner {
+    width: 100%;
+    height: 12.592593rem;
+    background: url("../../assets/product-banner.png") no-repeat center top;
+    background-size: 100% 12.592593rem;
+    position: relative;
+
+    .lunbotu {
+      width: 20rem;
+      height: 11rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+
+      .swiper-container {
+        width: 20rem;
+        height: 11rem;
+
+        img {
+          width: 20rem;
+          height: 11rem;
         }
       }
-      .second-title{
-        font-family: PingFangSC-Semibold;
-        font-size: 0.56rem;
-        letter-spacing: 0;
-        margin-bottom: 5px;
-      }
-      .title-intro{
-        font-family: PingFangSC-Regular;
-        font-size: 0.44rem;
-        letter-spacing: 0;
-        margin-bottom: 0.2rem;
-      }
-      .title-disc{
-        font-family: PingFangSC-Regular;
-        font-size: 0.33rem;
-        letter-spacing: 0;
+
+      .button {
+        top: 2.2rem;
+        z-index: 9999;
+        position: absolute;
+        display: inline-block;
+        width: 1.04rem;
+        height: 8.78rem;
+        background: url(../../assets/zuojiantou1.png) no-repeat center center;
+        background-size: 100% 1.04rem;
+
+        &.prev {
+          position: absolute;
+          margin-top: -1rem;
+          left: -22%;
+        }
+
+        &:hover, &.active {
+          background-image: url(../../assets/zuojiantou1-xuanzhong.png);
+        }
+
+        &.next {
+          position: absolute;
+          margin-top: -1rem;
+          right: -22%;
+          background-image: url(../../assets/youjiantou1.png);
+
+          &:hover, &.active {
+            background-image: url(../../assets/youjiantou1-xuanzhong.png);
+          }
+        }
       }
     }
   }
-  .park-future{
-    height: 22.31rem;
-    text-align: center;
-    .text{
-      margin-top: 1.51rem;
-      color: #333;
-      .title{
-        b{
-          display: inline-block;
-          width: 100%;
-          font-family: PingFangSC-Light;
-          font-size: 0.89rem;
-          letter-spacing: 0;
-          margin-bottom: 3px;
-        }
-        span{
-          font-family: PingFangSC-Light;
-          font-size: 0.44rem;
-          letter-spacing: 0;
-        }
-      }
-      .disc{
-        display: inline-block;
-        width: 9.7rem;
-        font-family: PingFangSC-Semibold;
-        font-size: 0.56rem;
-        letter-spacing: 0;
-        margin: 0.66rem 0 0.74rem;
-      }
+
+  .shouji {
+    width: 100%;
+    height: 572px;
+    background: white;
+    background-size: 100% 572px;
+    position: relative;
+
+    .title {
+      width: 8rem;
+      margin-left: 6rem;
+      margin-top: 1.2rem;
     }
-    .detail{
-      position: relative;
-      .park{
-        display: inline-block;
-        width: 32.87%;//11.69rem;
-        text-align: left;
-        .tips{
-          margin-bottom: 0.37rem;
-          ul{
-            li{
-              display: inline-block;
-              margin-right: 0.925rem;
-              text-align: center;
-              width: 1.74rem;
-              i{
-                display: inline-block;
-                width: 100%;
-                height: 1.74rem;
-                background: url(../../assets/icon-lit-perception.png) no-repeat center center;
-                background-size: 1.74rem 1.74rem;
-              }
-              &:last-child{margin-right: 0;}
-              &.energy{
-                i{background-image: url(../../assets/icon-lit-energy.png);}
-              }
-              &.time{
-                i{background-image: url(../../assets/icon-lit-time.png);}
-              }
-              &.info{
-                i{background-image: url(../../assets/icon-lit-info.png);}
-              }
-              &.financial{
-                i{background-image: url(../../assets/icon-lit-financial.png);}
-              }
-              &.flux{
-                i{background-image: url(../../assets/icon-lit-flux.png);}
-              }
-              &.replace{
-                i{background-image: url(../../assets/icon-lit-replace.png);}
-              }
+
+    .shouji-lunbo {
+      width: 25rem;
+      height: 6rem;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -70%);
+      border-style: solid;
+      border-width: 2px;
+      background: #ffffff;
+      .lunbotu2 {
+        width: 24rem;
+        height: 4rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+
+        .swiper-container {
+          width: 24rem;
+          height: 4rem;
+
+          img {
+            width: 8.2rem;
+            height: 4rem;
+          }
+        }
+
+        .button2 {
+          top: 2.2rem;
+          z-index: 9999;
+          position: absolute;
+          display: inline-block;
+          width: 1.04rem;
+          height: 8.78rem;
+          background: url(../../assets/zuojiantou2.png) no-repeat center center;
+          background-size: 100% 1.04rem;
+
+          &.prev2 {
+            position: absolute;
+            margin-top: -4.64rem;
+            left: -8%;
+          }
+
+          &:hover, &.active {
+            background-image: url(../../assets/zuojiantou2-xuanzhong.png);
+          }
+
+          &.next2 {
+            position: absolute;
+            margin-top: -4.64rem;
+            right: -8%;
+            background-image: url(../../assets/youjiantou2.png);
+
+            &:hover, &.active {
+              background-image: url(../../assets/youjiantou2-xuanzhong.png);
             }
           }
         }
-        .park-img{
-          width: 11.68rem;
-          height: 9rem;
-          background: url(../../assets/park-wisdom.png) no-repeat center center;
-          background-size: 100%;
-        }
-        .feature{
-          .feature-item{
-            li{
-              font-family: PingFangSC-Light;
-              font-size: 0.37rem;
-              color: #333333;
-              letter-spacing: 0;
-              margin-bottom: 0.2rem;
-              span{
-                margin-right: 0.67rem;
-                &:last-child{margin-right: 0;}
-              }
-              &.title{
-                font-family: PingFangSC-Semibold;
-                font-size: 0.44rem;
-                color: #4A4A4A;
-                margin-bottom: 0.39rem;
-              }
-            };
-          }
-        }
-        &.ecological{
-          margin-left: 3rem;
-          .park-img{
-            background: url(../../assets/park-ecological.png) no-repeat right center;
-            background-size: 11.43rem 8.93rem;
-          }
-        }
-      }
-      .eachReplace{
-        position: absolute;
-        top: 2.87rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 2.70rem;
-        height: 3.17rem;
-        text-align: center;
-        .arrow{
-          display: inline-block;
-          width: 100%;
-          height: 0.59rem;
-          background: url(../../assets/icon-arrow-left.png) no-repeat center center;
-          background-size: 2.7rem 0.59rem;
-          &.right{
-            background-image: url(../../assets/icon-arrow-right.png);
-          }
-        }
-        .park-logo{
-          display: inline-block;
-          width: 1.5rem;//0.83rem;
-          height: 1.26rem;//1.06rem;
-          margin: 0.39rem 0;
-          background: url(../../assets/yuan-lit-logo.png) no-repeat left center;
-          background-size: 1.5rem 1.26rem;
-        }
       }
     }
   }
-  .wisdomService{
-    text-align: center;
-    height: 14.8rem;
-    background: url(../../assets/icon-bg2.jpg) no-repeat center center;
-    background-size: 100% 14.8rem;
-    color: #fff;
-    .img{
-      display: inline-block;
-      width: 8.24rem;
-      height: 100%;
-      background: url(../../assets/p-service.png) no-repeat center center;
-      background-size: 8.24rem 8rem;
-      vertical-align: middle;
-      margin-right: 1.74rem;
-    }
-    ul{
-      display: inline-block;
-      width: 36.76%;//11.65rem;
-      vertical-align: middle;
-      li{
-        margin-bottom: 0.56rem;
-        font-family: PingFangSC-Regular;
-        font-size: 0.37rem;
-        letter-spacing: 0;
-        text-align: justify;
-        i{
-          display: inline-block;
-          width: 5%;//0.185rem;
-          height: 0.185rem;
-          background: url(../../assets/p-tip.png) no-repeat center center;
-          background-size: 0.185rem 0.185rem;
-          /*margin-right: 0.4rem;*/
-          &.mark{
-            /*width: 0.37rem;*/
-            height: 0.35rem;
-            background-image: url(../../assets/p-star.png);
-            background-size: 0.37rem 0.35rem;
-          }
-        }
-        span{
-          display: inline-block;
-          width: 92%;
-          vertical-align: text-top;
-        }
-        &.title{
-          ont-family: PingFangSC-Semibold;
-          font-size: 0.56rem;//30px;
-          letter-spacing: 0;
-          margin-bottom: 0.9rem;
-          text-align: center;
-        }
-        &.line{
-          i{background: none;}
-          span{
-            border: 1px solid #979797;
-            margin-top: 0.56rem;
-          }
-        }
-      }
-    }
 
-  }
-  .operaSolution{
-    text-align: center;
-    .title-disc{
-      display: inline-block;
-      width: 5.9rem;
-      font-family: PingFangSC-Semibold;
-      font-size: 0.56rem;
-      color: #333333;
-      letter-spacing: 0;
-      margin-top: 2.6rem;
-    }
-    .detail{
-      margin-bottom: 2.5rem;
-      .opImg{
-        display: inline-block;
-        width: 20.53%;//7.3rem;
-        height: 8.43rem;
-        background: url(../../assets/p-question.png) no-repeat center center;
-        background-size: 100%;
-        vertical-align: middle;
-        &.target{background-image: url(../../assets/p-target.png);}
-      }
-      .eachReplace{
-        display: inline-block;
-        vertical-align: middle;
-        width: 2.70rem;
-        height: 3.17rem;
-        text-align: center;
-        margin: 0 2.4rem;
-        .arrow{
-          display: inline-block;
-          width: 100%;
-          height: 0.59rem;
-          background: url(../../assets/icon-arrow-left.png) no-repeat center center;
-          background-size: 2.7rem 0.59rem;
-          &.right{
-            background-image: url(../../assets/icon-arrow-right.png);
-          }
-        }
-        .park-logo{
-          display: inline-block;
-          width: 1.5rem;//0.83rem;
-          height: 1.26rem;//1.06rem;
-          margin: 0.39rem 0;
-          background: url(../../assets/yuan-lit-logo.png) no-repeat left center;
-          background-size: 1.5rem 1.26rem;
-        }
-      }
-    }
-
-  }
-  .outline{
-    height: 20rem;
-    text-align: center;
-    background-image: linear-gradient(-180deg, #F2F2F2 0%, #E3E3E3 100%);
-    .text{
-      padding-top: 1.16rem;
-      li{
-        font-family: PingFangSC-Light;
-        font-size: 0.44rem;//24px;
-        color: #333333;
-        letter-spacing: 0;
-        &.text-title{
-          font-size: 0.89rem;//48px;
-          margin: 0.17rem 0 3px;
-        }
-      }
-    }
-    .detail{
-      height: 13.6rem;
-      margin-top: 0.69rem;
-      background: url(../../assets/p-outline.png) no-repeat center center;
-      background-size: 23.7rem 13.2rem;
-    }
-  }
-  .systemFrame{
-    text-align: center;
-    .title-disc{
-      display: inline-block;
-      width: 100%;//5.9rem;
-      font-family: PingFangSC-Semibold;
-      font-size: 0.56rem;//30px;
-      color: #333333;
-      letter-spacing: 0;
-      margin: 2.6rem 0 2.7rem;
-    }
-    .detail{
-      height: 10.24rem;
-      background: url(../../assets/p-system.png) no-repeat center center;
-      background-size: 23.48rem 10.24rem;
-      margin-bottom: 4.9rem;
-    }
-  }
-  .productForm{
-    text-align: center;
-    height: 15.74rem;
-    background: url(../../assets/icon-bg2.jpg) no-repeat center center;
-    background-size: 100% 15.74rem;
-    color: #fff;
-    padding-top: 1.74rem;
-    .title-disc{
-      display: inline-block;
-      width: 100%;//5.9rem;
-      font-family: PingFangSC-Semibold;
-      font-size: 0.56rem;//30px;
-      letter-spacing: 0;
-      margin-bottom: 0.185rem;
-    }
-    .detail{
-      margin-top: 1.78rem;//96px;
-      li{
-        margin-bottom: 1.61rem;
-        span{
-          display: inline-block;
-          width: 8.46rem;//457px;
-          height: 2.85rem;//154px;
-          background: url(../../assets/park-operator.png) no-repeat center center;
-          background-size: 8.46rem 2.85rem;
-          margin-right: 2.9rem;
-          &.parkProperty{background-image: url(../../assets/park-propertyAPP.png);}
-          &.parkBack{background-image: url(../../assets/park-back.png);}
-          &.parkIntelMonit{background-image: url(../../assets/park-intelMonitor.png);}
-          &:last-child{margin-right: 0;}
-        }
-      }
-    }
-  }
-  .userScenario{
+  .tv {
+    width: 100%;
+    height: 572px;
+    background: #eeeeee;
+    background-size: 100% 572px;
     position: relative;
-    text-align: center;
-    .text{
-      height: 12.94rem;
-      padding-top: 2.4rem;
-      li{
-        font-family: PingFangSC-Light;
-        font-size: 0.44rem;//24px;
-        color: #333333;
-        letter-spacing: 0;
-        &.title{
-          font-size: 0.89rem;//48px;
-          margin-bottom: 3px;
-        }
-        &.title-disc{
-          margin: 1.4rem 0 0.78rem;
-          font-family: PingFangSC-Semibold;
-          font-size: 0.56rem;//30px;
-        }
-      }
+
+    .title {
+      width: 8rem;
+      margin-left: 6rem;
+      margin-top: 1.2rem;
     }
-    .detail{
-      height: 13.63rem;
-      position: relative;
-      background: #E7E7E7;
-      span{
-        font-family: PingFangSC-Regular;
-        font-size: 0.44rem;///24px;
-        color: #9B9B9B;
-        letter-spacing: 0;
+
+    .tv-lunbo {
+      width: 25rem;
+      height: 6rem;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -70%);
+      border-style: solid;
+      border-width: 2px;
+      background: #eeeeee;
+      .lunbotu3 {
+        width: 24rem;
+        height: 4rem;
         position: absolute;
-        bottom: 1.15rem;
         left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-    .text-disc{
-      position: absolute;
-      bottom: 15.8rem;
-      height: 3.06rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 25.65rem;
-      span{
-        font-family: PingFangSC-Light;
-        font-size: 20px;
-        color: #333333;
-        letter-spacing: 0;
-        display: inline-block;
-        vertical-align: text-top;
-        width: 120px;
-        &.fir{margin: 34px 105px 0 0;}
-        &.sec{margin: 88px 95px 0 0;}
-        &.th{
-          margin: 29px 123px 0 0;
-        }
-        &.fou{
-          width: 160px;
-          margin-right: 136px;
-        }
-        &.fiv{
-          width: 170px;
-          margin: 113px 44px 0 0;
-        }
-      }
-    }
-    .usImg{
-      position: absolute;
-      bottom: 1.67rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 16.19rem;
-      background: url(../../assets/p-user-selfSer.png) no-repeat center center;
-      background-size: 25.65rem 16.19rem;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #eeeeee;
 
-    }
-  }
-  .user-contact{
-    text-align: center;
-    height: 18rem;
-    background: url(../../assets/icon-bg2.jpg) no-repeat center center;
-    background-size: 100% 18rem;
-    .text{
-      display: inline-block;
-      padding-top: 2.22rem;
-      li{
-        width: 9.54rem;
-        font-family: PingFangSC-Light;
-        font-size: 0.37rem;//20px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        &.title-disc{
-          font-family: PingFangSC-Semibold;
-          font-size: 0.56rem;//30px;
-          margin-bottom: 0.33rem;
+        .swiper-container {
+          width: 24rem;
+          height: 4rem;
+
+          img {
+            width: 8.2rem;
+            height: 4rem;
+          }
         }
-      }
-    }
-    .detail{
-      height: 8.91rem;
-      background: url(../../assets/p-user-contact.png) no-repeat center center;
-      background-size: 20.04rem 8.91rem;
-      margin-top: 2.1rem;
-    }
-  }
-  .office-online{
-    position: relative;
-    height: 21.06rem;
-    text-align: center;
-    background-image: linear-gradient(-180deg, #F2F2F2 0%, #E3E3E3 100%);
-    .text{
-      padding-top: 2.3rem;
-      .text-disc{
-        display: inline-block;
-        width: 100%;
-        font-family: PingFangSC-Semibold;
-        font-size: 0.56rem;//30px;
-        color: #333333;
-        letter-spacing: 0;
-        margin-bottom: 0.63rem;
-      }
-      .text-info{
-        display: inline-block;
-        width: 14.2rem;
-        li{
+
+        .button3 {
+          top: 2.2rem;
+          z-index: 9999;
+          position: absolute;
           display: inline-block;
-          font-family: PingFangSC-Light;
-          font-size: 0.37rem;//20px;
-          color: #333333;
-          letter-spacing: 0;
-          margin: 0 0.4rem 0.31rem;
-        }
-      }
-    }
-    .detail{
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 21.89rem;
-      height: 14.31rem;
-      background: url(../../assets/p-office-online.png) no-repeat center center;
-      background-size: 21.89rem 14.31rem;
-    }
-  }
-  .parkAll{
-    text-align: center;
-    padding: 2.37rem 0 1.68rem;
-    .text-disc{
-      display: inline-block;
-      width: 100%;
-      font-family: PingFangSC-Semibold;
-      font-size: 0.56rem;//30px;
-      color: #333333;
-      letter-spacing: 0;
-      margin-bottom: 2.9rem;
-    }
-    .img{
-      display: inline-block;
-      width: 9.56rem;
-      height: 9.5rem;
-      background: url(../../assets/p-park-overview.png) no-repeat center center;
-      background-size: 9.56rem 9.5rem;
-      margin-right: 1.85rem;
-      vertical-align: middle;
-    }
-    .text{
-      display: inline-block;
-      vertical-align: middle;
-      width: 35.7%;//12.7rem;
-      li{
-        margin-bottom: 0.67rem;
-        color: #333333;
-        letter-spacing: 0;
-        text-align: left;
-        b{
-          display: inline-block;
-          width: 100%;
-          margin-bottom: 0.26rem;
-          font-family: PingFangSC-Semibold;
-          font-size: 0.56rem;//30px;
-        }
-        span{
-          font-family: PingFangSC-Light;
-          font-size: 0.37rem;//20px;
+          width: 1.04rem;
+          height: 8.78rem;
+          background: url(../../assets/zuojiantou2.png) no-repeat center center;
+          background-size: 100% 1.04rem;
+
+          &.prev3 {
+            position: absolute;
+            margin-top: -4.64rem;
+            left: -8%;
+          }
+
+          &:hover, &.active {
+            background-image: url(../../assets/zuojiantou2-xuanzhong.png);
+          }
+
+          &.next3 {
+            position: absolute;
+            margin-top: -4.64rem;
+            right: -8%;
+            background-image: url(../../assets/youjiantou2.png);
+
+            &:hover, &.active {
+              background-image: url(../../assets/youjiantou2-xuanzhong.png);
+            }
+          }
         }
       }
     }
   }
 
-
+  .yewu {
+    width: 100%;
+    height: 12.96rem;
+    background: url(../../assets/product-yewu.png) no-repeat center center;
+    background-size: 100% 12.96rem;
+  }
 </style>

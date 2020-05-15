@@ -1,6 +1,6 @@
-import Swiper from './swiper.vue';
-import Slide from './slide.vue';
+import MySwiper from './swiper.vue';
+import MySlide from './slide.vue';
 
 export {
-  Swiper, Slide
+  MySwiper, MySlide
 }
