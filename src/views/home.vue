@@ -186,7 +186,7 @@
         background-size: 100%;
         vertical-align: middle;
         position: absolute;
-        top: -1.5%;
+        top: -1%;
       }
     }
 
