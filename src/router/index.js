@@ -77,6 +77,10 @@ export default new Router({
           path: '/tv/kebao',
           component: resolve => require(['../views/pages/productInfos/tv/kebao.vue'], resolve),
         },
+        {
+          path: '/other/prevention-of-addiction',
+          component: resolve => require(['../views/pages/productInfos/other/fangchenmi.vue'], resolve),
+        },
 
       ]
     },

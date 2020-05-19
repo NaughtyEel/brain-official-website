@@ -39,6 +39,9 @@
             box-sizing: border-box;" index="/product" key="/product">查看所有产品
               </el-menu-item>
 
+              <el-menu-item class="biaoti" index="/other/prevention-of-addiction"
+                            key="/other/prevention-of-addiction">未成年人家长监护体系
+              </el-menu-item>
               <el-menu-item class="biaoti" index="/mobile/biohazard-survival"
                             key="/mobile/biohazard-survival">Biohazard
                 Survival
