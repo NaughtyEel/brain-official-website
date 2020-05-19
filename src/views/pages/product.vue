@@ -20,10 +20,14 @@
       <div class="shouji-lunbo">
         <div class="lunbotu2">
           <div class="button2 prev2" @click="prevSlideClick2"></div>
-          <div class="swiper-container2">
+          <div class="swiper-container2 swiper-no-swiping">
             <swiper ref="productSwiper2" :options="swiperOption2">
-              <swiper-slide><img src="../../assets/chanpina1.jpg"/></swiper-slide>
-              <swiper-slide><img src="../../assets/chanpina2.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/mobile/biohazard-survival')" src="../../../static/phone-BiohazardSurvival/thumbnail.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/mobile/jet-gun')" src="../../../static/phone-JetGun/thumbnail.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/mobile/prisoners-fled')"
+                                 src="../../../static/phone-PrisonersFled/thumbnail.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/mobile/street-combat')" src="../../../static/phone-StreetCombat/thumbnail.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/mobile/unknow-battle')" src="../../../static/phone-unknowBattle/thumbnail.jpg"/></swiper-slide>
               <div class="swiper-pagination2" slot="pagination"></div>
             </swiper>
           </div>
@@ -37,13 +41,15 @@
       <div class="tv-lunbo">
         <div class="lunbotu3">
           <div class="button3 prev3" @click="prevSlideClick3"></div>
-          <div class="swiper-container3">
+          <div class="swiper-container3 swiper-no-swiping">
             <swiper ref="productSwiper3" :options="swiperOption3">
-              <swiper-slide><img src="../../assets/tvproduct1.jpg"/></swiper-slide>
-              <swiper-slide><img src="../../assets/tvproduct2.jpg"/></swiper-slide>
-              <swiper-slide><img src="../../assets/tvproduct3.jpg"/></swiper-slide>
-              <swiper-slide><img src="../../assets/tvproduct4.jpg"/></swiper-slide>
-              <swiper-slide><img src="../../assets/tvproduct5.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/tv/kebao')" src="../../assets/tvproduct1.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/tv/yuanbao')" src="../../assets/tvproduct2.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/tv/doudizhu')" src="../../assets/tvproduct3.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/tv/damao')" src="../../assets/tvproduct4.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/tv/xiaolieren')" src="../../assets/tvproduct5.jpg"/></swiper-slide>
+              <swiper-slide><img @click="gotoMenu('/tv/kong-fu-soccer')"
+                                 src="../../../static/tv-KongFuSoccer/campaignPic.jpg"/></swiper-slide>
               <div class="swiper-pagination3" slot="pagination"></div>
             </swiper>
           </div>
@@ -83,8 +89,7 @@
           grabCursor: true,
           loop: true,
           slidesPerView : 3,
-          centeredSlides : true,
-          spaceBetween : 100,
+          spaceBetween : 80,
           navigation: {
             outline: 'none',
           },
@@ -95,7 +100,6 @@
           grabCursor: true,
           loop: true,
           slidesPerView : 3,
-          centeredSlides : true,
           spaceBetween : 100,
           navigation: {
             outline: 'none',
@@ -118,6 +122,11 @@
       console.log('Current Swiper instance object', this.swiper);
     },
     methods: {
+      gotoMenu(url){
+        console.log(url);
+        // 跳转到对应产品信息页面
+        this.$router.replace(url);
+      },
       prevSlideClick() {
         this.swiper.slidePrev();
       },
@@ -144,9 +153,9 @@
 <style lang="scss" scoped>
   .banner {
     width: 100%;
-    height: 12.592593rem;
+    height: 16.592593rem;
     background: url("../../assets/product-banner.png") no-repeat center top;
-    background-size: 100% 12.592593rem;
+    background-size: 100% 16.592593rem;
     position: relative;
 
     .lunbotu {

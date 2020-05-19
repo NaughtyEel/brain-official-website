@@ -9,11 +9,20 @@ import Vuex from 'vuex'
 import 'lib-flexible'
 import Toast from 'vue-toast-component';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
+import preview from 'vue-photo-preview';
+import 'vue-photo-preview/dist/skin.css';
+let options = {
+  fullscreenEl: false
+};
+Vue.use(preview, options);
+Vue.use(preview);
+
 // import swiper style
 import 'swiper/css/swiper.css'
 
 Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false;
+
 
 Vue.use(Toast);
 Vue.use(ElementUI);

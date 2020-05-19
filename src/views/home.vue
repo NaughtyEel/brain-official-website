@@ -5,12 +5,69 @@
         <div class="logoImg"></div>
       </el-col>
       <el-col :span="12" class="nav">
-        <el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose"
+        <el-menu :default-active="$route.path" class="el-menu-vertical-demo"
+                 @open="handleopen"
+                 @close="handleclose"
+                 mode="horizontal"
                  @select="handleselect" unique-opened router>
-          <template v-for="(item,index) in $router.options.routes">
-            <el-menu-item v-for="child in item.children" :index="child.path" :key="child.path">{{child.name}}
-            </el-menu-item>
-          </template>
+          <el-menu-item index="/homePage" key="/homePage">公司首页
+          </el-menu-item>
+          <el-menu-item index="/introduce" key="/introduce">公司介绍
+          </el-menu-item>
+          <el-submenu index="/product">
+            <template slot="title"><span  @click="gotoProduct()">公司产品</span></template>
+            <div style="
+            border: none;
+            border-radius: 2px;
+            -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+            margin-top: 5px;
+            width: 4rem;
+            background: #ffffff;
+            float: none;
+            line-height: 32px;
+            padding: 0 10px;
+            color: #909399;">
+              <el-menu-item style="
+               outline:none;
+            font-size: 13px;
+            color: #712fda;
+            padding: 0 16px;
+            cursor: pointer;
+            -webkit-transition: border-color .3s,background-color .3s,color .3s;
+            transition: border-color .3s,background-color .3s,color .3s;
+            box-sizing: border-box;" index="/product" key="/product">查看所有产品
+              </el-menu-item>
+
+              <el-menu-item class="biaoti" index="/mobile/biohazard-survival"
+                            key="/mobile/biohazard-survival">Biohazard
+                Survival
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/mobile/jet-gun" key="/mobile/jet-gun">Jet Gun
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/mobile/prisoners-fled">Prisoners Fled
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/mobile/street-combat">Street Combat
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/mobile/unknow-battle">Unknow Battle
+              </el-menu-item>
+
+              <el-menu-item class="biaoti" index="/tv/damao" key="/tv/damao">达猫小分队
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/tv/doudizhu">金牌真人斗地主
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/tv/kebao">科宝乐园
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/tv/kong-fu-soccer">FIFA Kong Fu Soccer
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/tv/xiaolieren">印第安小猎人
+              </el-menu-item>
+              <el-menu-item class="biaoti" index="/tv/yuanbao">源宝乐园
+              </el-menu-item>
+            </div>
+          </el-submenu>
+          <el-menu-item index="/joinUs" key="/joinUs">加入我们
+          </el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
@@ -33,7 +90,7 @@
           公司产品 ｜
         </router-link>
         <router-link to="/joinUs" style="color: #ffffff;text-decoration: none">
-           加入我们
+          加入我们
         </router-link>
       </div>
       <div class="ownerShip2">
@@ -44,6 +101,7 @@
 </template>
 
 <script>
+  //import 'element-ui/lib/theme-chalk/index.css';
   export default {
     data() {
       return {
@@ -51,6 +109,12 @@
       }
     },
     methods: {
+      gotoProduct() {
+        this.$router.replace('/product');
+      },
+      toProduct() {
+        this.$router.replace('/product');
+      },
       handleopen() {
         //console.log('handleopen');
       },
@@ -74,10 +138,22 @@
   }
 
 </script>
-
+<style>
+  .el-menu--horizontal {
+    overflow: auto;
+    height: 3.6rem;
+  }
+</style>
 <style scoped lang="scss">
-  .router-button {
-
+  .biaoti {
+    outline: none;
+    font-size: 12px;
+    color: #303133;
+    padding: 0 10px;
+    cursor: pointer;
+    -webkit-transition: border-color .3s, background-color .3s, color .3s;
+    transition: border-color .3s, background-color .3s, color .3s;
+    box-sizing: border-box;
   }
 
   .container {
@@ -109,6 +185,8 @@
         background: url(../assets/keyuan-logo.png) no-repeat center center;
         background-size: 100%;
         vertical-align: middle;
+        position: absolute;
+        top: -1.5%;
       }
     }
 
@@ -125,6 +203,40 @@
 
         &.is-active {
           color: #4071e2;
+        }
+      }
+
+      .el-submenu {
+        list-style: none;
+        display: inline-block;
+        padding: 0 20px;
+        cursor: pointer;
+        margin-right: 70px; //0.7rem;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #4a4a4a;
+        outline: none;
+
+        &.is-active {
+          color: #4071e2;
+        }
+
+        li {
+          display: list-item;
+          text-align: -webkit-match-parent;
+        }
+
+        .el-menu {
+          border-right: solid 1px #e6e6e6;
+          list-style: none;
+          position: relative;
+          margin: 0;
+          padding-left: 0;
+          background-color: #FFF;
+        }
+
+        ul {
+          list-style-type: disc;
         }
       }
     }
