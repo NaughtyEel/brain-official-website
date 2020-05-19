@@ -22,23 +22,12 @@
             -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
             box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
             margin-top: 5px;
-            width: 4rem;
+            width: 3.6rem;
             background: #ffffff;
             float: none;
             line-height: 32px;
             padding: 0 10px;
             color: #909399;">
-              <el-menu-item style="
-               outline:none;
-            font-size: 13px;
-            color: #712fda;
-            padding: 0 16px;
-            cursor: pointer;
-            -webkit-transition: border-color .3s,background-color .3s,color .3s;
-            transition: border-color .3s,background-color .3s,color .3s;
-            box-sizing: border-box;" index="/product" key="/product">查看所有产品
-              </el-menu-item>
-
               <el-menu-item class="biaoti" index="/other/prevention-of-addiction"
                             key="/other/prevention-of-addiction">未成年人家长监护体系
               </el-menu-item>
@@ -66,6 +55,17 @@
               <el-menu-item class="biaoti" index="/tv/xiaolieren">印第安小猎人
               </el-menu-item>
               <el-menu-item class="biaoti" index="/tv/yuanbao">源宝乐园
+              </el-menu-item>
+
+              <el-menu-item style="
+               outline:none;
+            font-size: 13px;
+            color: #712fda;
+            padding: 0 16px;
+            cursor: pointer;
+            -webkit-transition: border-color .3s,background-color .3s,color .3s;
+            transition: border-color .3s,background-color .3s,color .3s;
+            box-sizing: border-box;" index="/product" key="/product">—— 查看所有产品 ——
               </el-menu-item>
             </div>
           </el-submenu>
