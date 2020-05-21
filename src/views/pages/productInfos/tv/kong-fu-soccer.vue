@@ -119,9 +119,9 @@
 <style lang="scss" scoped>
   .banner {
     width: 100%;
-    height: 12.592593rem;
-    background: url("../../../../../static/tv-KongFuSoccer/banner.png") no-repeat center top;
-    background-size: 100% 12.592593rem;
+    height: 16.592593rem;
+    background: url("../../../../../static/tv-KongFuSoccer/chanpina3.png") no-repeat center top;
+    background-size: 100% 16.592593rem;
   }
 
   .info-box {
