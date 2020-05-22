@@ -2,7 +2,7 @@
   <section>
     <div class="banner"></div>
 
-    <el-button type="primary" @click="gotoBack" class="back">< 返回</el-button>
+    <!--<el-button type="primary" @click="gotoBack" class="back">< 返回</el-button>-->
 
     <div class="info-box">
       <div class="info">

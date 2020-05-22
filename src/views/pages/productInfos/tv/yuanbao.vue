@@ -2,7 +2,7 @@
   <section>
     <div class="banner"></div>
 
-    <el-button type="primary" @click="gotoBack" class="back">< 返回</el-button>
+   <!-- <el-button type="primary" @click="gotoBack" class="back">< 返回</el-button>-->
 
     <div class="info-box">
       <div class="info">
@@ -120,6 +120,17 @@
     background-size: 100% 16.592593rem;
   }
 
+  .back {
+    outline: none;
+    border-radius: 0.4rem;
+    width: 1.5rem;
+    height: 0.75rem;
+    left: 3%;
+    margin-top: 3%;
+    position: absolute;
+    background: #ffffff;
+  }
+
   .info-box {
     width: 100%;
     height: 24rem;
@@ -128,17 +139,6 @@
     justify-content: center;
     align-items: center;
     z-index: 0;
-
-    .back {
-      outline: none;
-      border-radius: 0.4rem;
-      width: 1.5rem;
-      height: 0.75rem;
-      left: 3%;
-      margin-top: 3%;
-      position: absolute;
-      background: #ffffff;
-    }
 
     .info {
       width: 80%;
