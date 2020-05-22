@@ -205,7 +205,7 @@
         margin-left: 10%;
 
         .swiper-container {
-          width: 19rem;
+          width: 100%;
           height: 7.6rem;
           z-index: 0;
           img {
