@@ -369,6 +369,6 @@
     width: 100%;
     height: 12.96rem;
     background: url(../../assets/product-yewu.png) no-repeat center center;
-    background-size: 100% 12.96rem;
+    background-size: 31.6rem;
   }
 </style>

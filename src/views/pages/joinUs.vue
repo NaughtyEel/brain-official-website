@@ -416,9 +416,8 @@
       display: inline-block;
       width: 100%;
       height: 10.481481rem;
-      background: #333333;
       background: url(../../assets/home-5.png) no-repeat center top;
-      background-size: 100% 10.481481rem; //cover;
+      background-size: 31.6rem; //cover;
     }
   }
 </style>

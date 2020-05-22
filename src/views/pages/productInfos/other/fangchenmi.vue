@@ -2,9 +2,9 @@
   <section>
     <div class="banner"></div>
 
-    <div class="info-box">
-      <el-button type="primary" style="background: #eee" @click="gotoBack" class="back">< 返回</el-button>
+    <el-button type="primary" style="background: #eee" @click="gotoBack" class="back">< 返回</el-button>
 
+    <div class="info-box">
       <div class="info">
         <p class="text1">
           <span class="font1">服务热线：</span>
@@ -71,7 +71,18 @@
     width: 100%;
     height: 12.592593rem;
     background: url("../../../../../static/jianhu-banner.png") no-repeat center top;
-    background-size: 100% 12.592593rem;
+    background-size: 32rem;
+  }
+
+  .back {
+    outline:none;
+    border-radius: 0.4rem;
+    width: 1.5rem;
+    height: 0.75rem;
+    left: 3%;
+    margin-top: 2%;
+    position: absolute;
+    background: #ffffff;
   }
 
   .info-box {
@@ -81,18 +92,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -1rem;
     z-index: 0;
-
-    .back {
-      outline:none;
-      border-radius: 0.4rem;
-      width: 1.5rem;
-      height: 0.75rem;
-      left: 3%;
-      margin-top: -55%;
-      position: absolute;
-      background: #ffffff;
-    }
 
     .info {
       width: 80%;

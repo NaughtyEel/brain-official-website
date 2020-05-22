@@ -40,7 +40,9 @@
     </el-row>
 
     <div class="secends-info">
-      <ul class="introduce-page1"></ul>
+      <ul class="introduce-page1">
+        <!--<img src="../../assets/introduce-lichen.png" alt="图片未找到">-->
+      </ul>
       <ul class="introduce-page2"></ul>
       <ul class="introduce-page3"></ul>
     </div>
@@ -61,6 +63,8 @@
     },
     data() {
       return {
+        xzsrc: require('../../assets/lunbo-xz.png'),
+        wxzsrc: require('../../assets/lunbo-wxz.png'),
         list: [
           {
             img: require('../../assets/banner1.png')
@@ -77,9 +81,9 @@
             type: 'custom',
             renderCustom: function (swiper, current, total) {
               const xz =
-                '<div style="margin: 3px;display:inline"><img src="../../../static/lunbo-xz.png" style="width: 16px;height: 16px" alt="X"/></div>';
+                '<div style="margin: 3px;display:inline"><img src="./static/lunbo-xz.png" style="width: 16px;height: 16px"/></div>';
               const wxz =
-                '<div style="margin: 3px;display:inline"><img src="../../../static/lunbo-wxz.png" style="width: 16px;height: 16px" alt="o"/></div>';
+                '<div style="margin: 3px;display:inline"><img src="./static/lunbo-wxz.png" style="width: 16px;height: 16px"/></div>';
               let res = '';
               if (current === 1) {
                 res = xz + wxz + wxz + wxz + wxz + wxz + wxz;
@@ -267,14 +271,14 @@
       width: 100%;
       height: 693px;
       background: url(../../assets/introduce-lichen.png) no-repeat center top;
-      background-size: 100% 693px; //cover;
+      background-size: 31rem; //cover;
     }
     .introduce-page2 {
       display: inline-block;
       width: 100%;
       height: 777.875px;
       background: url(../../assets/introduce-jiangxiang.png) no-repeat center top;
-      background-size: 100% 777.875px; //cover;
+      background-size: 32rem; //cover;
     }
     .introduce-page3 {
       display: inline-block;
@@ -282,7 +286,7 @@
       height: 10.481481rem;
       background: #333333;
       background: url(../../assets/home-5.png) no-repeat center top;
-      background-size: 100% 10.481481rem; //cover;
+      background-size: 32rem; //cover;
     }
   }
 </style>

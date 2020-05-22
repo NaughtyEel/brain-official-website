@@ -151,7 +151,7 @@
       width: 100%;
       height: 712px;
       background: url(../../assets/home-1.png) no-repeat center top;
-      background-size: 100% 712px; //cover;
+      background-size: 31rem; //cover;
     }
 
     .home-page2 {
@@ -159,7 +159,7 @@
       width: 100%;
       height: 612.5px;
       background: url(../../assets/home-2.png) no-repeat center top;
-      background-size: 100% 612.5px; //cover;
+      background-size: 31.6rem; //cover;
     }
 
     .home-page3 {
@@ -167,7 +167,7 @@
       width: 100%;
       height: 553px;
       background: url(../../assets/home-3.png) no-repeat center top;
-      background-size: 100% 553px; //cover;
+      background-size: 31.6rem; //cover;
     }
 
     .home-page4 {
@@ -175,7 +175,7 @@
       width: 100%;
       height: 539px;
       background: url(../../assets/home-4.png) no-repeat center top;
-      background-size: 100% 539px; //cover;
+      background-size: 31.6rem; //cover;
     }
 
     .home-page5 {
@@ -184,7 +184,7 @@
       height: 10.481481rem;
       background: #333333;
       background: url(../../assets/home-5.png) no-repeat center top;
-      background-size: 100% 10.481481rem; //cover;
+      background-size: 31rem; //cover;
     }
   }
 </style>

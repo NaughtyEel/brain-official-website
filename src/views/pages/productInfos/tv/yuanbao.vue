@@ -2,9 +2,9 @@
   <section>
     <div class="banner"></div>
 
-    <div class="info-box">
-      <el-button type="primary" @click="gotoBack" class="back">< 返回</el-button>
+    <el-button type="primary" @click="gotoBack" class="back">< 返回</el-button>
 
+    <div class="info-box">
       <div class="info">
         <div class="title1">
           <img src="../../../../../static/ico_title.png" alt="> "/>
@@ -135,7 +135,7 @@
       width: 1.5rem;
       height: 0.75rem;
       left: 3%;
-      margin-top: -35%;
+      margin-top: 3%;
       position: absolute;
       background: #ffffff;
     }
@@ -168,8 +168,8 @@
         .banner-info {
           width: 12rem;
           height: 4rem;
-          margin-left: 20%;
-          margin-top: -16.5%;
+          margin-left: 250px;
+          margin-top: -210px;
           background: #ffffff;
 
           .text1 {
