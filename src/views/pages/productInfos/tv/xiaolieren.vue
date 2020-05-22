@@ -15,15 +15,15 @@
           <img src="../../../../../static/tv-xiaolieren/logo.jpg" alt="游戏LOGO">
           <div class="banner-info">
             <p class="text1">印第安小猎人</p>
-            <p style="margin-top: 3%">
+            <p style="margin-top: 2%">
               <span class="text2">类别:</span>
               <span class="text3">&ensp;动作射击类</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">语言:</span>
               <span class="text3">&ensp;中文</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">简介:</span>
               <span class="text3">&ensp;《印第安小猎人》是一款特别有意思的射击类休闲小游戏。</span>
             </p>
@@ -166,7 +166,6 @@
         }
 
         .banner-info {
-          width: 12rem;
           height: 4rem;
           margin-left: 250px;
           margin-top: -210px;

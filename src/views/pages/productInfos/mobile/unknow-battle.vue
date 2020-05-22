@@ -15,15 +15,15 @@
           <img src="../../../../../static/phone-unknowBattle/logo.png" alt="游戏LOGO">
           <div class="banner-info">
             <p class="text1">PLAYER UNKNOWNS BATTLE GROUNDSS</p>
-            <p style="margin-top: 3%">
+            <p style="margin-top: 2%">
               <span class="text2">类别:</span>
               <span class="text3">&ensp;动作游戏</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">语言:</span>
               <span class="text3">&ensp;英语</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">简介:</span>
               <span class="text3">&ensp;Who is the 'legend', Let's wait and see!</span>
             </p>
@@ -166,7 +166,6 @@
         }
 
         .banner-info {
-          width: 12rem;
           height: 4rem;
           margin-left: 250px;
           margin-top: -210px;

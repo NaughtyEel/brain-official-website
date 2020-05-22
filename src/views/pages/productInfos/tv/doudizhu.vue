@@ -15,15 +15,15 @@
           <img src="../../../../../static/tv-KongFuSoccer/logo.png" alt="游戏LOGO">
           <div class="banner-info">
             <p class="text1">金牌真人斗地主</p>
-            <p style="margin-top: 3%">
+            <p style="margin-top: 2%">
               <span class="text2">类别:</span>
               <span class="text3">&ensp;电视棋牌</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">语言:</span>
               <span class="text3">&ensp;中文</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">简介:</span>
               <span class="text3">&ensp;金牌真人斗地主是为河南联通定制开发的一款电视棋牌类游戏。</span>
             </p>
@@ -166,7 +166,6 @@
         }
 
         .banner-info {
-          width: 12rem;
           height: 4rem;
           margin-left: 250px;
           margin-top: -210px;

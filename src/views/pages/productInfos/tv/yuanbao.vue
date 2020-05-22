@@ -15,15 +15,15 @@
           <img src="../../../../../static/tv-yuanbao/logo.jpg" alt="游戏LOGO">
           <div class="banner-info">
             <p class="text1">源宝乐园</p>
-            <p style="margin-top: 3%">
+            <p style="margin-top: 2%">
               <span class="text2">类别:</span>
               <span class="text3">&ensp;幼儿教育</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">语言:</span>
               <span class="text3">&ensp;中文</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">简介:</span>
               <span class="text3">&ensp;源宝乐园是一款专门为家庭幼儿阅读教育研发的专业产品。</span>
             </p>
@@ -166,7 +166,6 @@
         }
 
         .banner-info {
-          width: 12rem;
           height: 4rem;
           margin-left: 250px;
           margin-top: -210px;

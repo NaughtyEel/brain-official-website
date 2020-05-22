@@ -15,15 +15,15 @@
           <img src="../../../../../static/tv-kebao/logo.jpg" alt="游戏LOGO">
           <div class="banner-info">
             <p class="text1">科宝乐园</p>
-            <p style="margin-top: 3%">
+            <p style="margin-top: 2%">
               <span class="text2">类别:</span>
               <span class="text3">&ensp;幼儿教育</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">语言:</span>
               <span class="text3">&ensp;中文</span>
             </p>
-            <p style="margin-top: 4%">
+            <p style="margin-top: 2%">
               <span class="text2">简介:</span>
               <span class="text3">&ensp;科宝乐园是一款专门为家庭幼儿教育研发的系统化幼儿教育产品。</span>
             </p>
@@ -166,7 +166,6 @@
         }
 
         .banner-info {
-          width: 12rem;
           height: 4rem;
           margin-left: 250px;
           margin-top: -210px;
