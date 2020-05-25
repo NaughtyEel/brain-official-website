@@ -1,63 +1,54 @@
 <template>
   <div>
     <el-row class="container" :class="isopacity?'isopa':''">
-      <el-col :span="12" class="logo">
+      <el-col :span="12" style="width: 40%" class="logo">
         <div class="logoImg"></div>
       </el-col>
-      <el-col :span="12" class="nav">
-        <el-menu :default-active="$route.path" class="el-menu-vertical-demo"
+      <el-col :span="12" style="width: 60%" class="nav">
+        <el-menu :default-active="$route.path" style="margin-left: 16%" class="el-menu-vertical-demo"
                  @open="handleopen"
                  @close="handleclose"
                  mode="horizontal"
                  @select="handleselect" unique-opened router>
-          <el-menu-item index="/homePage" key="/homePage">公司首页
+          <el-menu-item index="/homePage" key="/homePage">
+            <p style="margin-top: -0.18rem">公司首页</p>
+            <p style="margin-top: -1rem">Home</p>
           </el-menu-item>
-          <el-menu-item index="/introduce" key="/introduce">公司介绍
+          <el-menu-item index="/introduce" key="/introduce">
+            <p style="margin-top: -0.18rem">公司介绍</p>
+            <p style="margin-top: -1rem">About Us</p>
           </el-menu-item>
-          <el-submenu index="/product">
-            <template slot="title"><span  @click="gotoProduct()">公司产品</span></template>
+          <el-submenu style="margin-right: 5%;" index="/product">
+            <template slot="title">
+              <span @click="gotoProduct()">
+                <p style="margin-top: -0.18rem">公司产品</p>
+                <p style="margin-top: -1rem">Products</p>
+              </span>
+            </template>
             <div style="
             border: none;
             border-radius: 2px;
             -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
             box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
-            margin-top: 5px;
             width: 3.6rem;
             background: #ffffff;
             float: none;
             line-height: 32px;
+            margin-top: 62px;
+            z-index: 999999;
             padding: 0 10px;
             color: #909399;">
               <el-menu-item class="biaoti" index="/other/prevention-of-addiction"
                             key="/other/prevention-of-addiction">未成年人家长监护体系
               </el-menu-item>
-              <el-menu-item class="biaoti" index="/mobile/biohazard-survival"
-                            key="/mobile/biohazard-survival">Biohazard
-                Survival
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/mobile/jet-gun" key="/mobile/jet-gun">Jet Gun
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/mobile/prisoners-fled">Prisoners Fled
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/mobile/street-combat">Street Combat
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/mobile/unknow-battle">Unknow Battle
+              <el-menu-item class="biaoti" index="/product"
+                            key="/product">公司游戏
               </el-menu-item>
 
-              <el-menu-item class="biaoti" index="/tv/damao" key="/tv/damao">达猫小分队
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/tv/doudizhu">金牌真人斗地主
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/tv/kebao">科宝乐园
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/tv/kong-fu-soccer">FIFA Kong Fu Soccer
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/tv/xiaolieren">印第安小猎人
-              </el-menu-item>
-              <el-menu-item class="biaoti" index="/tv/yuanbao">源宝乐园
-              </el-menu-item>
+              <!--<el-menu-item class="biaoti" index="/tv/yuanbao">源宝乐园
+              </el-menu-item>-->
 
-              <el-menu-item style="
+              <!--<el-menu-item style="
                outline:none;
             font-size: 13px;
             color: #712fda;
@@ -66,10 +57,12 @@
             -webkit-transition: border-color .3s,background-color .3s,color .3s;
             transition: border-color .3s,background-color .3s,color .3s;
             box-sizing: border-box;" index="/product" key="/product">—— 查看所有产品 ——
-              </el-menu-item>
+              </el-menu-item>-->
             </div>
           </el-submenu>
-          <el-menu-item index="/joinUs" key="/joinUs">加入我们
+          <el-menu-item index="/joinUs" key="/joinUs">
+            <p style="margin-top: -0.18rem">加入我们</p>
+            <p style="margin-top: -1rem">Join Us</p>
           </el-menu-item>
         </el-menu>
       </el-col>
@@ -142,6 +135,10 @@
 
 </script>
 <style>
+  .el-submenu__title {
+    height: 0.2rem;
+  }
+
   .el-menu--horizontal {
     overflow: auto;
     height: 3.6rem;
@@ -163,14 +160,14 @@
     position: fixed;
     width: 100%;
     top: 0;
-    height: 45px;
-    line-height: 45px;
+    height: 75px;
+    line-height: 75px;
     background: #fff;
     z-index: 1000;
+    display: flex;
     /*opacity: 0.9;*/
     .el-col {
       display: inline-block;
-      width: 48%;
     }
 
     .logo {
@@ -183,13 +180,13 @@
 
       .logoImg {
         display: inline-block;
-        width: 84px;
-        height: 44px;
+        width: 2rem;
+        height: 2rem;
         background: url(../assets/keyuan-logo.png) no-repeat center center;
-        background-size: 100%;
+        background-size: 150%;
         vertical-align: middle;
         position: absolute;
-        top: -1%;
+        top: -24%;
       }
     }
 
@@ -198,11 +195,12 @@
         display: inline-block;
         padding: 0 20px;
         cursor: pointer;
-        margin-right: 70px; //0.7rem;
+        margin-right: 6%;
         font-family: PingFangSC-Regular;
         font-size: 14px;
         color: #4a4a4a;
         outline: none;
+        text-align: center;
 
         &.is-active {
           color: #4071e2;
