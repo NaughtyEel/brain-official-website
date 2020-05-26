@@ -12,7 +12,8 @@
 
     <div class="joinUs-info">
       <ul class="join-page1">
-        <img src="../../assets/shuxian.png" alt="|"/>
+        <img src="../../../static/JOINUS1.png">
+        <!--<img src="../../assets/shuxian.png" alt="|"/>
         <li class="title">Java高级开发工程师</li>
         <div class="text">
           <div class="title2">职位描述:</div>
@@ -37,11 +38,12 @@
           <div class="words">8. 熟悉Maven，SVN，Eclipse等常用项目管理工具、开发工具 </div>
           <div class="words">9. 熟悉Redis等互联网常用分布式系统 </div>
           <div class="words">10. 有开放API开发经验者优先</div>
-        </div>
+        </div>-->
       </ul>
 
       <ul class="join-page2">
-        <img src="../../assets/shuxian.png" alt="|"/>
+        <img src="../../../static/JOINUS2.png">
+       <!-- <img src="../../assets/shuxian.png" alt="|"/>
         <li class="title">Java开发工程师</li>
         <div class="text">
           <div class="title2">职位描述:</div>
@@ -62,10 +64,18 @@
           <div class="words">7. 熟悉分布式系统的设计和应用，熟悉分布式服务框架等机制，能对分布式常用技术进行合理</div>
           <div class="words">&ensp;应用解决问题</div>
           <div class="words">8. 工作有激情，学习能力强，团队协作能力强</div>
-        </div>
+        </div>-->
       </ul>
 
       <ul class="join-page3">
+        <img src="../../../static/JOINUS3.png">
+      </ul>
+
+      <ul class="join-page4">
+        <img src="../../../static/JOINUS4.png">
+      </ul>
+
+      <!--<ul class="join-page3">
         <img src="../../assets/shuxian.png" alt="|"/>
         <li class="title">高级Unity3d开发工程师</li>
         <div class="text">
@@ -109,9 +119,11 @@
           <div class="words">7. 有IOS或Android平台游戏制作经验者优先，有动画基础者优先 注：应聘简历中，请附</div>
           <div class="words">&ensp;代表性作品</div>
         </div>
-      </ul>
+      </ul>-->
 
-      <ul class="join-page5"></ul>
+      <ul class="join-page5">
+        <img style="width: 100%;height: 100%" alt="NONE" src="../../assets/home-5.png"/>
+      </ul>
     </div>
   </section>
 </template>
@@ -240,7 +252,7 @@
   }
 
   .joinUs-info {
-    .title {
+    /*.title {
       width: 6.3rem;
       height: 0.56rem;
       font-size: 0.55rem;
@@ -250,174 +262,44 @@
       position: absolute;
       margin-left: 6rem;
       margin-top: -0.8rem;
-    }
+    }*/
 
     .join-page1 {
       width: 100%;
-      height: 938px;
-      background: #ffffff;
-
+      height: auto;
       img {
-        width: 0.074074rem;
-        height: 0.981481rem;
-        margin-top: 8rem;
-        margin-left: 5.3rem;
-      }
-
-      .text {
-        position: absolute;
-        background: #FFFFFF;
-        width: 16rem;
-        height: 15rem;
-        margin-top: -8.2rem;
-        margin-left: 15rem;
-        display: block;
-        .title2 {
-          width:124px;
-          height:28px;
-          font-size:28px;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(49,49,49,1);
-        }
-        .words {
-          width:12rem;
-          height:0.8rem;
-          font-size:0.3rem;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(130,130,130,1);
-          line-height:48px;
-        }
+        width: 100%;
       }
     }
 
     .join-page2 {
       width: 100%;
-      height: 938px;
-      background: #eee;
-
+      height: auto;
       img {
-        width: 0.074074rem;
-        height: 0.981481rem;
-        margin-top: 8rem;
-        margin-left: 5.3rem;
-      }
-
-      .text {
-        position: absolute;
-        background: #eee;
-        width: 16rem;
-        height: 12rem;
-        margin-top: -6.2rem;
-        margin-left: 15rem;
-        display: block;
-        .title2 {
-          width:124px;
-          height:28px;
-          font-size:28px;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(49,49,49,1);
-        }
-        .words {
-          width:15rem;
-          height:0.8rem;
-          font-size:0.3rem;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(130,130,130,1);
-          line-height:48px;
-        }
+        width: 100%;
       }
     }
 
     .join-page3 {
       width: 100%;
-      height: 938px;
-      background: #ffffff;
-
+      height: auto;
       img {
-        width: 0.074074rem;
-        height: 0.981481rem;
-        margin-top: 8rem;
-        margin-left: 5.3rem;
-      }
-
-      .text {
-        position: absolute;
-        background: #ffffff;
-        width: 16rem;
-        height: 12rem;
-        margin-top: -6.2rem;
-        margin-left: 15rem;
-        display: block;
-        .title2 {
-          width:124px;
-          height:28px;
-          font-size:28px;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(49,49,49,1);
-        }
-        .words {
-          width:15rem;
-          height:0.8rem;
-          font-size:0.3rem;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(130,130,130,1);
-          line-height:48px;
-        }
+        width: 100%;
       }
     }
 
     .join-page4 {
       width: 100%;
-      height: 15.4rem;
-      background: #eee;
-
+      height: auto;
       img {
-        width: 0.074074rem;
-        height: 0.981481rem;
-        margin-top: 8rem;
-        margin-left: 5.3rem;
-      }
-
-      .text {
-        position: absolute;
-        background: #eee;
-        width: 16rem;
-        height: 12rem;
-        margin-top: -6.2rem;
-        margin-left: 15rem;
-        display: block;
-        .title2 {
-          width:124px;
-          height:28px;
-          font-size:28px;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(49,49,49,1);
-        }
-        .words {
-          width:15rem;
-          height:0.8rem;
-          font-size:0.3rem;
-          font-family:Source Han Sans CN;
-          font-weight:bold;
-          color:rgba(130,130,130,1);
-          line-height:48px;
-        }
+        width: 100%;
       }
     }
 
     .join-page5 {
       display: inline-block;
       width: 100%;
-      height: 10.481481rem;
-      background: url(../../assets/home-5.png) no-repeat center top;
-      background-size: 31.6rem; //cover;
+      height: auto;
     }
   }
 </style>

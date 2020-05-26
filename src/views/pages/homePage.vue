@@ -13,11 +13,21 @@
     </div>
 
     <div class="info">
-      <ul class="home-page1"></ul>
-      <ul class="home-page2"></ul>
-      <ul class="home-page3"></ul>
-      <ul class="home-page4"></ul>
-      <ul class="home-page5"></ul>
+      <ul class="home-page1">
+        <img style="width: 100%;height: 100%" alt="NONE" src="../../assets/home-1.png"/>
+      </ul>
+      <ul class="home-page2">
+        <img style="width: 100%;height: 100%" alt="NONE" src="../../assets/home-2.png"/>
+      </ul>
+      <ul class="home-page3">
+        <img style="width: 100%;height: 100%" alt="NONE" src="../../assets/home-3.png"/>
+      </ul>
+      <ul class="home-page4">
+        <img style="width: 100%;height: 100%" alt="NONE" src="../../assets/home-4.png"/>
+      </ul>
+      <ul class="home-page5">
+        <img style="width: 100%;height: 100%" alt="NONE" src="../../assets/home-5.png"/>
+      </ul>
     </div>
   </section>
 </template>
@@ -149,42 +159,36 @@
     .home-page1 {
       display: inline-block;
       width: 100%;
-      height: 712px;
-      background: url(../../assets/home-1.png) no-repeat center top;
-      background-size: 31rem; //cover;
+      height: auto;
+      max-height: 712px;
     }
 
     .home-page2 {
       display: inline-block;
       width: 100%;
-      height: 612.5px;
-      background: url(../../assets/home-2.png) no-repeat center top;
-      background-size: 31.6rem; //cover;
+      height: auto;
+      max-height: 612.5px;
     }
 
     .home-page3 {
       display: inline-block;
       width: 100%;
-      height: 553px;
-      background: url(../../assets/home-3.png) no-repeat center top;
-      background-size: 31.6rem; //cover;
+      height: auto;
+      max-height: 553px;
     }
 
     .home-page4 {
       display: inline-block;
       width: 100%;
-      height: 539px;
-      background: url(../../assets/home-4.png) no-repeat center top;
-      background-size: 31.6rem; //cover;
+      height: auto;
+      max-height: 539px;
     }
 
     .home-page5 {
       display: inline-block;
       width: 100%;
-      height: 10.481481rem;
-      background: #333333;
-      background: url(../../assets/home-5.png) no-repeat center top;
-      background-size: 31rem; //cover;
+      height: auto;
+      max-height: 10.481481rem;
     }
   }
 </style>

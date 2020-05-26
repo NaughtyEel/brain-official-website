@@ -1,8 +1,10 @@
 <template>
   <section>
-    <div class="banner"></div>
+    <div class="banner">
+      <img style="width: 100%;height: 100%;" src="../../../../../static/jianhu-banner.png"/>
+    </div>
 
-    <el-button type="primary" style="background: #eee" @click="gotoBack" class="back">< 返回</el-button>
+    <!--<el-button type="primary" style="background: #eee" @click="gotoBack" class="back">< 返回</el-button>-->
 
     <div class="info-box">
       <div class="info">
@@ -69,9 +71,7 @@
 <style lang="scss" scoped>
   .banner {
     width: 100%;
-    height: 12.592593rem;
-    background: url("../../../../../static/jianhu-banner.png") no-repeat center top;
-    background-size: 32rem;
+    height: auto;
   }
 
   .back {
@@ -96,11 +96,12 @@
     z-index: 0;
 
     .info {
-      width: 80%;
+      width: 24rem;
       height: 36rem;
       background: #eeeeee;
       position: absolute;
       border-radius: 25px;
+      margin-top: 2%;
       .text1 {
         margin-top: 0.8rem;
         margin-left: 10%;

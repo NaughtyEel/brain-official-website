@@ -27,13 +27,19 @@
               <swiper-slide><img src="../../../static/introduce-heying5.jpg"/></swiper-slide>
               <swiper-slide><img src="../../../static/introduce-heying6.jpg"/></swiper-slide>
               <swiper-slide><img src="../../../static/introduce-heying7.jpg"/></swiper-slide>
-              <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
           </div>
         </el-row>
+        <div style="position: absolute;width: 45%;height: 10%;margin-top: -3%;margin-left: 42%">
+          <div class="swiper-pagination" slot="pagination"></div>
+        </div>
         <el-row>
           <div class="img-xiaotu1">
             <img src="../../assets/introduce-xiaotu1.png" alt="none"/>
+          </div>
+        </el-row>
+        <el-row>
+          <div style="margin-left: 43%;margin-top: 8%;">
           </div>
         </el-row>
       </el-col>
@@ -41,10 +47,14 @@
 
     <div class="secends-info">
       <ul class="introduce-page1">
-        <!--<img src="../../assets/introduce-lichen.png" alt="图片未找到">-->
+        <img style="height: 100%;width: 100%" src="../../assets/introduce-lichen.png" alt="图片未找到">
       </ul>
-      <ul class="introduce-page2"></ul>
-      <ul class="introduce-page3"></ul>
+      <ul class="introduce-page2">
+        <img style="height: 100%;width: 100%" src="../../assets/introduce-jiangxiang.png" alt="图片未找到">
+      </ul>
+      <ul class="introduce-page3">
+        <img style="height: 100%;width: 100%" src="../../assets/home-5.png" alt="图片未找到">
+      </ul>
     </div>
   </section>
 </template>
@@ -81,9 +91,9 @@
             type: 'custom',
             renderCustom: function (swiper, current, total) {
               const xz =
-                '<div style="margin: 3px;display:inline"><img src="./static/lunbo-xz.png" style="width: 16px;height: 16px"/></div>';
+                '<div style="margin: 3px;display:inline"><img src="./static/lunbo-xz.png" style="width: 2.5%;height: 2.5%"/></div>';
               const wxz =
-                '<div style="margin: 3px;display:inline"><img src="./static/lunbo-wxz.png" style="width: 16px;height: 16px"/></div>';
+                '<div style="margin: 3px;display:inline"><img src="./static/lunbo-wxz.png" style="width: 2.5%;height: 2.5%"/></div>';
               let res = '';
               if (current === 1) {
                 res = xz + wxz + wxz + wxz + wxz + wxz + wxz;
@@ -93,11 +103,11 @@
                 res = wxz + wxz + xz + wxz + wxz + wxz + wxz;
               } else if (current === 4) {
                 res = wxz + wxz + wxz + xz + wxz + wxz + wxz;
-              }  else if (current === 5) {
+              } else if (current === 5) {
                 res = wxz + wxz + wxz + wxz + xz + wxz + wxz;
-              }  else if (current === 6) {
+              } else if (current === 6) {
                 res = wxz + wxz + wxz + wxz + wxz + xz + wxz;
-              }  else if (current === 7) {
+              } else if (current === 7) {
                 res = wxz + wxz + wxz + wxz + wxz + wxz + xz;
               } else {
                 res = wxz + wxz + wxz + wxz + wxz + wxz + wxz;
@@ -131,6 +141,14 @@
   html, body {
     margin: 0;
     padding: 0;
+  }
+
+  .swiper-slide .swiper-slide-duplicate {
+    margin-top: 8% !important;
+  }
+
+  .swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-next {
+    margin-top: 8% !important;
   }
 
   .el-col {
@@ -217,50 +235,53 @@
     }
   }
 
+  .swiper-pagination {
+    width: 100%;
+
+  }
+
   .introduce-info {
     width: 100%;
-    height: 16.888889rem;
+    max-height: 16.888889rem;
+    height: auto;
     background: #ffffff;
 
     .img-jieshao {
-      position: absolute;
-      margin-top: 7.62rem;
-      margin-left: 5.85rem;
+      width: 13%;
+      height: 25%;
+      margin-top: 20%;
+      margin-left: 21%;
 
       img {
-        height: 3.074074rem;
+        width: 80%;
+        height: 80%;
       }
     }
 
     .lunbotu {
-      position: absolute;
-      margin-top: 0.814815rem;
-      margin-left: 13.15rem;
+      width: 50%;
+      margin-top: -25%;
+      margin-left: 40%;
 
       .swiper-container {
-        width: 12.2rem;
-        height: 6rem;
+        width: 90%;
+        height: 80%;
 
         img {
-          width: 12.2rem;
-          height: 5rem;
-        }
-
-        .swiper-pagination {
-          position: relative;
           width: 100%;
-          bottom: 0.407407rem;
+          height: 85%;
         }
       }
     }
 
     .img-xiaotu1 {
-      position: absolute;
-      margin-left: 12.962963rem;
-      margin-top: 7.2rem;
+      margin-left: 43%;
+      margin-top: 4%;
+      width: 44%;
 
       img {
-        height: 7.777778rem;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -269,24 +290,22 @@
     .introduce-page1 {
       display: inline-block;
       width: 100%;
-      height: 693px;
-      background: url(../../assets/introduce-lichen.png) no-repeat center top;
-      background-size: 31rem; //cover;
+      max-height: 693px;
+      height: auto;
     }
+
     .introduce-page2 {
       display: inline-block;
       width: 100%;
-      height: 777.875px;
-      background: url(../../assets/introduce-jiangxiang.png) no-repeat center top;
-      background-size: 32rem; //cover;
+      max-height: 777.875px;
+      height: auto;
     }
+
     .introduce-page3 {
       display: inline-block;
       width: 100%;
-      height: 10.481481rem;
-      background: #333333;
-      background: url(../../assets/home-5.png) no-repeat center top;
-      background-size: 32rem; //cover;
+      max-height: 10.481481rem;
+      height: auto;
     }
   }
 </style>

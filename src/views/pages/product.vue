@@ -58,7 +58,9 @@
       </div>
     </div>
 
-    <div class="yewu"></div>
+    <div class="yewu">
+      <img style="height: 100%;width: 100%;" src="../../assets/product-yewu.png" alt="NONE"/>
+    </div>
   </section>
 </template>
 
@@ -190,7 +192,7 @@
         &.prev {
           position: absolute;
           margin-top: -1rem;
-          left: -22%;
+          left: -12%;
         }
 
         &:hover, &.active {
@@ -200,7 +202,7 @@
         &.next {
           position: absolute;
           margin-top: -1rem;
-          right: -22%;
+          right: -12%;
           background-image: url(../../assets/youjiantou1.png);
 
           &:hover, &.active {
@@ -219,14 +221,14 @@
     position: relative;
 
     .title {
-      width: 8rem;
-      margin-left: 6rem;
-      margin-top: 1.2rem;
+      width: 22%;
+      margin-left: 20%;
+      margin-top: 5%;
     }
 
     .shouji-lunbo {
-      width: 25rem;
-      height: 6rem;
+      width: 82%;
+      height: 50%;
       position: absolute;
       left: 50%;
       top: 70%;
@@ -235,8 +237,7 @@
       border-width: 2px;
       background: #ffffff;
       .lunbotu2 {
-        width: 24rem;
-        height: 4rem;
+        width: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -244,7 +245,7 @@
         background: #ffffff;
 
         .swiper-container {
-          width: 24rem;
+          width: 96%;
           height: 4rem;
 
           img {
@@ -296,14 +297,14 @@
     position: relative;
 
     .title {
-      width: 8rem;
-      margin-left: 6rem;
-      margin-top: 1.2rem;
+      width: 22%;
+      margin-left: 20%;
+      margin-top: 5%;
     }
 
     .tv-lunbo {
-      width: 25rem;
-      height: 6rem;
+      width: 82%;
+      height: 50%;
       position: absolute;
       left: 50%;
       top: 70%;
@@ -312,8 +313,7 @@
       border-width: 2px;
       background: #eeeeee;
       .lunbotu3 {
-        width: 24rem;
-        height: 4rem;
+        width: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -321,7 +321,7 @@
         background: #eeeeee;
 
         .swiper-container {
-          width: 24rem;
+          width: 96%;
           height: 4rem;
 
           img {
@@ -367,8 +367,6 @@
 
   .yewu {
     width: 100%;
-    height: 12.96rem;
-    background: url(../../assets/product-yewu.png) no-repeat center center;
-    background-size: 31.6rem;
+    height: auto;
   }
 </style>
