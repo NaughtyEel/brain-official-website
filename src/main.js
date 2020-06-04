@@ -12,6 +12,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import preview from 'vue-photo-preview';
 import 'vue-photo-preview/dist/skin.css';
 import 'lib-flexible';
+import 'babel-polyfill';
 
 let options = {
   fullscreenEl: false
