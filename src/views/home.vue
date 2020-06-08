@@ -76,16 +76,16 @@
     </el-row>
     <el-row class="footer">
       <div class="ownerShip">
-        <router-link to="/homePage" style="color: #ffffff;text-decoration: none">
+        <router-link to="/homePage" style="font-size:14px;color: #ffffff;text-decoration: none">
           公司主页 ｜
         </router-link>
-        <router-link to="/introduce" style="color: #ffffff;text-decoration: none">
+        <router-link to="/introduce" style="font-size:14px;color: #ffffff;text-decoration: none">
           公司介绍 ｜
         </router-link>
-        <router-link to="/product" style="color: #ffffff;text-decoration: none">
+        <router-link to="/product" style="font-size:14px;color: #ffffff;text-decoration: none">
           公司产品 ｜
         </router-link>
-        <router-link to="/joinUs" style="color: #ffffff;text-decoration: none">
+        <router-link to="/joinUs" style="font-size:14px;color: #ffffff;text-decoration: none">
           加入我们
         </router-link>
       </div>
@@ -228,7 +228,10 @@
         text-align: center;
 
         &.is-active {
-          color: #4071e2;
+          color: #FFAA09;
+          font-size: 16px;
+          font-weight:bold;
+          text-shadow: 0px 6px 1px #eeeeee;
         }
       }
 
@@ -244,7 +247,10 @@
         outline: none;
 
         &.is-active {
-          color: #4071e2;
+          color: #FFAA09;
+          font-size: 16px;
+          font-weight:bold;
+          text-shadow: 0px 6px 1px #eeeeee;
         }
 
         li {
